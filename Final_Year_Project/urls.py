@@ -22,4 +22,7 @@ urlpatterns = [
     url(r'^getbrands$', views.getBrands, name='brands'),
     url(r'^getprods$', views.getProds, name='prods'),
     url(r'^summary$', views.summary, name='summary'),
+    url(r'^reviewerbased$', views.reviewer, name='reviewer'),
+    url(r'^reviewerinfo$', views.reviewerInfo, name='reviewerinfo'),
+    url(r'^cossim$', views.cosineSim, name='cossim'),
 ]

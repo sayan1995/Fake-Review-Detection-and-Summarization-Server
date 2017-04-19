@@ -122,6 +122,8 @@ SRC_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarizat
 
 ML_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/datasets/ML/'
 
+GZIP_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/datasets/Gzips/'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 

@@ -13,3 +13,15 @@ def getProds(request):
 def summary(request):
 	data = summarymain(request.GET["domain"], request.GET["prodid"], int(request.GET["summary_ch"]), request.GET["token"])#, "cellphones", "B0050I1MHC", 2, "n")
 	return HttpResponse(json.dumps(data))
+
+def reviewer(request):
+	data = reviewerBased(request.GET["domain"])
+	return HttpResponse(json.dumps(data))
+
+def reviewerInfo(request):
+	data = getreviewerdetails(request.GET["domain"], request.GET["id"])
+	return HttpResponse(json.dumps(data))
+
+def cosineSim(request):
+	data = cosinesimilarity(request.GET["domain"])
+	return HttpResponse(json.dumps(data))
