@@ -1,0 +1,272 @@
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+
+.no-js #loader {
+	display: none;
+}
+.gb{
+    margin-left: 15px;
+    margin-top: 50px;
+}
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/loading1.gif) center no-repeat #fff;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: inherit!important;
+	color: white;
+}
+
+.btn-file:hover, .sorting-option-selected:hover {
+	color: white!important;
+}
+
+a {
+	color: inherit;
+}
+
+.filediv {
+	position: relative;
+	overflow: hidden;
+	background-color: #66CDAA;
+	border: 1px solid #66CDAA;
+	color: white;
+	padding: 0px!important;
+	margin-left: -20px;
+	border-radius: 0px;
+	height: 80px;
+	width: 250px;
+	margin-top: -4px;
+}
+
+.notification {
+	margin-left: -275px;
+	//position:relative;
+	float: left;
+	width: 320px!important;
+}
+.btn-file {
+	//outline: dashed;
+	background-color: #66CDAA;
+	color: white;
+	margin-top: 20px;
+	width: 50%;
+	margin-left: 20%;
+	text-align: center;
+}
+
+.sidebar {
+	background-color: black;
+	color: #696969;
+}
+
+.active {
+	color: #ccc!important;
+}
+
+.continue, .continue:hover;
+.continue:focus {
+	background-color: #66CDAA;
+	border-color: #66CDAA;
+	color: white;
+}
+
+.btn-file input[type=file] {
+	border: 1px solid white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	outline: dotted;
+	background: blue;
+	cursor: inherit;
+	display: block;
+}
+
+.circle {
+	width: 50%;
+	height: auto;
+	padding-top: 50%;
+	margin-left: 40px;
+	background-color: #ccc;
+	border-radius: 50%;
+}
+
+.img-circle {
+	border-radius: 50%;
+	margin-left: 20px;
+}
+
+.profile:hover {
+	background-color: transparent;
+}
+
+.navbar {
+	background-color: black;
+}
+
+.navbar-brand {
+	color: white!important;
+}
+
+.pushup {
+	margin-top: -8px;
+}
+
+.profilePic {
+	border-radius: 50%;
+	margin-right: 15px!important;
+	margin-top: 8px;
+	height: 6%;
+	width: 6%;
+	float: right;
+}
+
+.notificationCount {
+	background: #cc0000;
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: 7px;
+	border-radius: 50%;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	position: absolute;
+	margin-top: -33px;
+	font-size: 11px;
+	width: 20px;
+	border: 3px solid black;
+	text-align: center;
+	margin-top: 2px;
+	margin-left: 590px;
+}
+
+.notificationVideoCount {
+	background: #696969;
+	color: black;
+	font-weight: bold;
+	margin-left: 7px;
+	border-radius: 50%;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	position: absolute;
+	margin-top: -33px;
+	font-size: 11px;
+	width: 20px;
+	border: 3px solid #696969;
+	text-align: center;
+	margin-left: 130px;
+	margin-top: 3px;
+}
+.progress{
+	background-color:red;
+	height:3px;
+	width:60px;
+}
+.page-header {
+	margin-top: 70px;
+}
+
+.itemOptions {
+	margin-top: 20px;
+}
+
+.options {
+	/*border-radius: 50%;
+	border: 2px solid #A9A9A9;
+	color: #A9A9A9;*/
+}
+
+.selected {
+	//margin-left:-250px;
+	color: #66CDAA;
+	border: 2px solid #66CDAA;
+}
+
+.col-xs-3, .col-sm-7, .col-sm-5 {
+	padding: 0px;
+}
+
+.col-xs-1, .col-xs-8 {
+	padding: 0px;
+}
+
+.page-header {
+	padding-bottom: 50px!important;
+}
+
+
+
+.desc {
+	margin-top: 8px;
+	font-style: bold;
+}
+
+.sorting-options {
+	color: #A9A9A9;
+}
+
+.btn:hover {
+	color: #A9A9A9;
+}
+
+.sorting-option-selected {
+	background-color: #66CDAA;
+	color: white;
+}
+
+.image-time {
+	color: #A9A9A9;
+	margin-left: 5px;
+}
+
+.image-name {
+	text-align: center;
+	font-weight:bold;
+	padding: 0px 10px 10px 0px;
+	height: 40px;
+	text-overflow: ellipsis;
+	white-space: normal;
+	overflow: hidden;
+}
+.sorting-name{
+	    float: right;
+			text-align: right;
+}
+.image-url {
+	width: 100px;
+	height: 100px;
+	display: block;
+  margin: auto;
+	border-radius:50%;
+}
+
+.clicked {
+	background-color: #DCDCDC;
+}
+
+.break {
+	height: 5px;
+}
+
+.selected-description {
+	font-weight: bold;
+	font-style: bold;
+}

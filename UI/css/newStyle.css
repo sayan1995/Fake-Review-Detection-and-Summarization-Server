@@ -1,0 +1,97 @@
+body{
+  /*background-color:#ccc;*/
+}
+
+*{
+  padding:0;
+}
+.header{
+    height:60px;
+}
+.noSidePadding{
+  padding-left:0px;
+  padding-right:0px;
+}
+.page-header{
+  border-bottom:1px solid #ccc;
+}
+.domain{
+  border:1px solid white;
+  text-align:center;
+}
+.categoryColor{
+  background-color:black;
+  height:90px;
+  margin-bottom:20px;
+  padding:20px;
+  cursor:pointer;
+  border-radius:2px;
+  color:white;
+}
+.itemsImage{
+  width: 30px;
+    height: 30px;
+    float: right;
+    /* line-height: 1.5; */
+    /* vertical-align: baseline; */
+    margin-top: 12px;
+  }
+.itemsText{
+  text-align: left;
+  font-size: 35px;
+  color: white;
+}
+.nav>li>a{
+  font-size: 25px;
+  text-align: left;v
+  margin-top:20px;
+}
+.tabCategory{
+  border: 1px solid #ccc;
+  margin-top:20px;
+}
+.col-md-offset-3{
+  margin-left: 29%!important;
+}
+.textrank{
+
+}
+.rfid{
+
+}
+/*modal*/
+.gramSelect{
+  width: 50px;
+}
+.bor{
+  width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+.size{
+    width: 217px!important;
+    /* text-align: center; */
+    float: right;
+    height: 20px;
+}
+.shimmer{
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #f6f7f9;
+  background-image: linear-gradient(to right, #f6f7f9 0%, #e9ebee 20%, #f6f7f9 40%, #f6f7f9 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  // position: relative;
+}
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

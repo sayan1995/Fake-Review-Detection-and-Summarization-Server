@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="../css/responsive.css" rel="stylesheet">
+  <link href="../css/search.css" rel="stylesheet">
+  <link href="../css/style1.css" rel="stylesheet">
+  <script src="../js/fake.js"/>
+  <script src="../js/jquery-events.js"></script>
+  <link href="../css/sidebar.css" rel="stylesheet"/>
+  <link href="../css/newStyle.css" rel="stylesheet"/>
+    <title>Fake Product View</title>
+  </head>
+  <script>
+  </script>
+  <body onload="init()">
+    <div class="navbar navbar-static navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+  			<div class="navbar-header">
+  				<button class="navbar-toggle toggle-left hidden-md hidden-lg" data-target=".sidebar-left" data-toggle="sidebar" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Fake Product Review</a>
+  			</div>
+  		</div>
+  	</div>
+    <div class="col-sm-3 col-md-2 col-xs-7 sidebar sidebar-left sidebar-animate sidebar-md-show">
+      <div class="filediv form-control">
+        <button class="btn btn-file continue form-control" type="button"><i aria-hidden="true" class="fa fa-upload"></i> <input type="file"></button>
+      </div>
+      <ul class="nav navbar-stacked">
+        <li></li>
+        <li style="list-style: none">
+          <br>
+          <div style="font-size:12px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MAIN</b>
+          </div>
+        </li>
+        <li class="active">
+          <a href="#"><i aria-hidden="true" class="fa fa-check-circle-o"></i>&nbsp;&nbsp;Overview</a>
+        </li>
+        <li class="pushup">
+          <a href="#about"><i aria-hidden="true" class="fa fa-circle-o"></i> &nbsp;&nbsp;Activity</a>
+        </li>
+        <li class="pushup">
+          <a href="#about"><i aria-hidden="true" class="fa fa-heart-o"></i> &nbsp;Dearest</a>
+        </li>
+        <li class="pushup">
+          <a href="#about"><i aria-hidden="true" class="fa fa-folder-open-o"></i> &nbsp;Folders</a>
+        </li>
+        <li style="list-style: none">
+          <br>
+          <div class="pushup" style="font-size:12px;margin-bottom:5px;">
+            &nbsp;&nbsp;&nbsp; <b>FILTER</b>
+          </div>
+        </li>
+        <li class="pushup">
+          <a href="#contact"><i aria-hidden="true" class="fa fa-picture-o"></i>&nbsp; Images</a>
+        </li>
+        <li class="pushup">
+          <a href="#contact"><i aria-hidden="true" class="fa fa-volume-up"></i> &nbsp; Audio</a><span class="notificationVideoCount" style="position:inline-block;">8</span>
+        </li>
+        <li class="pushup">
+          <a href="#contact"><i aria-hidden="true" class="fa fa-caret-square-o-right"></i> &nbsp; Video</a>
+        </li>
+        <li class="pushup">
+          <a href="#contact"><span class="glyphicon glyphicon-list-alt"></span> &nbsp;Notes</a>
+        </li>
+        <li class="pushup">
+          <a href="#contact"><span class="glyphicon glyphicon glyphicon-link"></span> &nbsp;Links</a>
+        </li>
+        <li class="pushup">
+          <a href="#contact"><i aria-hidden="true" class="fa fa-files-o"></i> &nbsp;Files</a>
+        </li>
+        <li class="gb">
+          50GB/100GB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+
+          <br><br>
+          <div class="progress" >
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="main col-sm-12 col-xs-12 col-md-12 " id="globalCntr">
+      <div class="page-header domain">
+              <h2>Choose Method Of Summary Generation</h2>
+      </div>
+      <div class="SummarySelections">
+        <div class="col-md-offset-3 col-md-5 col-xs-12"  data-toggle="modal" data-target="#rankTextModal">
+          <div class="textRank categoryColor">
+              <div class="itemsText">
+                Text Rank  <img class="itemsImage"src="../images/rightArrow.png"/>
+              </div>
+
+          </div>
+        </div>
+        <br>
+        <div class="col-md-offset-3 col-md-5 col-xs-12" data-toggle="modal" data-target="#rfidModal">
+          <div class="rfid categoryColor">
+              <div class="itemsText">
+                TFID   <img class="itemsImage"src="../images/rightArrow.png"/>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="categories">
+        <div class="">
+
+    </div>
+    <div id="items"></div>
+
+
+
+  </body>
+</html>
+
+
+
+
+<div class="modal fade" id="rankTextModal">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">Text Rank</h4>
+  </div>
+  <div class="modal-body">
+    <p>Do you want to enable debugging?</p>
+    <input type="checkbox"/>&nbspYes
+    <input type="checkbox"/>&nbspNo
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-default"><a href="textRanking.html">Proceed</a></button>
+  </div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="rfidModal">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title">TFID</h4>
+  </div>
+  <div class="modal-body">
+    <p>Do you want to enable debugging?</p>
+    <input type="checkbox"/>&nbspYes
+    <input type="checkbox"/>&nbspNo
+    <br>
+    <label>Input Gram size</label>
+    <input type="number" class="gramSelect"/>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-default"><a href="./tfid.html">Proceed</a></button>
+  </div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

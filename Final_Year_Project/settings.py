@@ -25,7 +25,7 @@ SECRET_KEY = 'h9f-xl4cp#($$*lmsr(jher^@5ukxr2%b^q#@woz#q!4&+uhq_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -114,17 +114,18 @@ USE_L10N = True
 
 USE_TZ = True
 
-DATASET_BRANDS_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/datasets/Brands/'
+DATASET_BRANDS_PATH = os.path.expanduser('~')+'/Fake-review-detection-and-Summarization/datasets/Brands/'
 
-DATASET_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/datasets/'
+DATASET_PATH = os.path.expanduser('~')+'/Fake-review-detection-and-Summarization/datasets/'
 
-SRC_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/src/'
+SRC_PATH = os.path.expanduser('~')+'/Fake-review-detection-and-Summarization/src/'
 
-ML_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/datasets/ML/'
+ML_PATH = os.path.expanduser('~')+'/Fake-review-detection-and-Summarization/datasets/ML/'
 
-GZIP_PATH = os.path.expanduser('~')+'/8thSem/Fake-review-detection-and-Summarization/datasets/Gzips/'
+GZIP_PATH = os.path.expanduser('~')+'/Fake-review-detection-and-Summarization/datasets/Gzips/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
+CORS_ORIGIN_ALLOW_ALL = True
 STATIC_URL = '/static/'

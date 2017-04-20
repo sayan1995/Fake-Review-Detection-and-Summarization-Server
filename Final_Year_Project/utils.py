@@ -16,6 +16,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 object_file = None
 def brandsParse(domain):
 	global object_file
+	print(settings.DATASET_BRANDS_PATH)
 	f = open(settings.DATASET_BRANDS_PATH + domain.lower() + ".pickle",'rb')
 	object_file = pickle.load(f)
 	c=0
