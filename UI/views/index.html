@@ -9,7 +9,7 @@
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/search.css" rel="stylesheet">
   <link href="../css/style1.css" rel="stylesheet">
-  <script src="../js/fake.js"/>
+  <script src="../js/fake.js"></script>
   <script src="../js/jquery-events.js"></script>
   <link href="../css/sidebar.css" rel="stylesheet"/>
   <link href="../css/newStyle.css" rel="stylesheet"/>
@@ -17,16 +17,8 @@
     <title>Fake Product View</title>
   </head>
   <script>
- function f(){
-	 $.ajax({
-   url: 'http://localhost:8000/getbrands?domain=clothes',
-	})
-    .done(function( data ) {
-      console.log(data);
-   });
-}
   </script>
-  <body onload="f()">
+  <body onload="init()">
     <div class="navbar navbar-static navbar-default navbar-fixed-top">
   		<div class="container-fluid">
   			<div class="navbar-header">

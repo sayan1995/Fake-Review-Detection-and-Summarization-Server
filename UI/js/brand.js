@@ -22,41 +22,39 @@ function fake(category)
 			}
 			var pause=0;
 				$.ajax({
-				url: 'http://localhost:8000/getbrands?domain='+category
+				url: 'http://localhost:8000/getprods?domain='+DOMAIN+'&brandchoice='+BRAND
 				 })
 				.done(function(data) {
 				console.log(data);
 				p1=[];
-
 				var currIndex = 0,index = 0;
 		    var listOfAuto = ['../images/automotives1.jpg', '../images/automotives2.jpg', '../images/automotives3.jpg', '../images/automotives4.jpg','../images/automotives5.jpg','../images/automotives6.jpg','../images/automotives7.jpg','../images/automotives8.jpg','../images/automotives9.jpg','../images/automotives10.jpg'];
 				var listOfClo = ['../images/c1.jpg', '../images/c2.jpg', '../images/c3.jpg', '../images/c4.jpg','../images/c5.jpg','../images/c6.jpg','../images/c7.jpg',];
 				var listOfCell = ['../images/p1.jpg', '../images/p2.jpg', '../images/p3.jpg', '../images/p4.jpg','../images/p5.jpg','../images/p6.jpg','../images/p7.jpg','../images/p8.jpg','../images/p9.jpg','../images/p10.jpg'];
-
-
-		    console.log(data.length)
-				for(i=0;i<20;i++)
-				{
-					if (index >= 5) {
-							index = index % 5;
-
-					}
-					var url='';
-					if(category=="CellPhones")
-					{
-						url=listOfCell[index];
-					}
-					else if(category=="Automotive")
-					{
-						url=listOfAuto[index];
-					}
-					else {
-						url=listOfClo[index];
-					}
-					list.push({'url':url,'name':data[i+1],'index':i+1,'category':category});
+				_.forEach(data, function(value, key) {
+												if (index >= 5) {
+														index = index % 5;
+												}
+												var url='';
+												if(category=="CellPhones")
+												{
+													url=listOfCell[index];
+												}
+												else if(category=="Automotive")
+												{
+													url=listOfAuto[index];
+												}
+												else {
+													url=listOfClo[index];
+												}
+											_.forEach(value, function(value1, key1) {
+											list.push({'url':url,'name':value1,'index':index+1,'id':key1});
+											console.log(value);
+											console.log(key);
+										});
+											index++;
+							});
 					console.log(list);
-					index++;
-				}
 				_this.data = list;
 				//console.log(_this.data[0].length);
 				_this.len = _this.data.length;
@@ -67,9 +65,6 @@ function fake(category)
 
 		}
 
-
-
-
 fake.prototype.load =function (list1) {
 	//format of data-JSON
 	//[filelist:[url:,name,time]]
@@ -79,16 +74,16 @@ fake.prototype.load =function (list1) {
 		$('.display-area').text('');
 	console.log(data);
 	var i = 0;
-var fillcards = setInterval(function () {
+	var fillcards = setInterval(function () {
 
-	var length = data.length-1;
+	var length = data.length;
 	var p = $('<div/>').attr('class', 'col-md-15');
 	$(p).addClass('col-lg-15');
 	$(p).addClass('card');
-	$(p).attr('name',data[i].category);
+	$(p).attr('name',data[i].name);
 	$(p).addClass('col-sm-15');
 	$(p).addClass('col-xs-15');
-		var card = ['<div id = "card card-' + i + '" name="'+data[i].category+'" index="'+data[i].index+'"><a href="./brands.html?index='+(i+1)+'&name='+data[i].category+'">\
+		var card = ['<div id = "card card-' + i + '" name="'+data[i].name+'" index="'+data[i].index+'"><a href="./summaryGeneration.html?index='+(i+1)+'&id='+data[i].id+'">\
 					<center><img class="image-url block-inline" src="' + data[i].url + '"></center>\
 					<div class="break"></div>\
 					<div class="image-name">' + data[i].name + '</div>\
@@ -102,7 +97,6 @@ if (i == length) {
 }
 
 },150);
-
 }
 function waitTime  () {
 	var  defer = $.Deferred();
@@ -127,7 +121,12 @@ fake.prototype.generate =function (url, name, div, i) {
 
 function init(category="Automotive")
 {
-	new fake(category);
+	DOMAIN=getURLParameter('name');
+	BRAND=getURLParameter('index');
+	localStorage.setItem('name',DOMAIN);
+	localStorage.setItem('index',BRAND);
+	$('.auto').text(DOMAIN);
+	new fake(category=DOMAIN);
 	if(registered==0)
 	registerEvents();
 	registered++;

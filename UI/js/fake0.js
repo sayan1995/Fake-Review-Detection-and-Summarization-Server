@@ -12,7 +12,7 @@ function fake(category)
 				$(p2).addClass('col-lg-15');
 				$(p2).addClass('col-sm-15');
 				$(p2).addClass('col-xs-15');
-					var card = ['<div id = "card"><a href="./summaryGeneration.html">\
+					var card = ['<div id = "card"><a href="#">\
 								<center><img class="block-inline  bor shimmer" src="" ></center>\
 								<div class="break"></div>\
 								<b class="image-name size shimmer"></b>\
@@ -53,7 +53,7 @@ function fake(category)
 					else {
 						url=listOfClo[index];
 					}
-					list.push({'url':url,'name':data[i+1],'index':i+1,'category':category});
+					list.push({'url':url,'name':data[i+1],'index':i+1});
 					console.log(list);
 					index++;
 				}
@@ -69,6 +69,19 @@ function fake(category)
 
 
 
+	/*u='[\
+				{"url":"../images/alone.jpg","name":"Alone.jpg"},\
+				{"url":"../images/cat.jpg","name":"Cat.jpg"},\
+				{"url":"../images/fire.jpg","name":"Fire.jpg"},\
+				{"url":"../images/Fotolia.jpg","name":"Fotolia.jpg"},\
+				{"url":"../images/Free.jpg","name":"Free.jpg"},\
+				{"url":"../images/leaf.jpg","name":"Leaf.jpg"},\
+				{"url":"../images/love.jpg","name":"Love.jpg"},\
+				{"url":"../images/web.jpg","name":"Web.jpg"},\
+				{"url":"../images/doggie.jpg","name":"doggie.jpg"},\
+				{"url":"../images/comp.jpg","name":"comp.jpg"}\
+			]';*/
+			//console.log(u);
 
 fake.prototype.load =function (list1) {
 	//format of data-JSON
@@ -85,10 +98,10 @@ var fillcards = setInterval(function () {
 	var p = $('<div/>').attr('class', 'col-md-15');
 	$(p).addClass('col-lg-15');
 	$(p).addClass('card');
-	$(p).attr('name',data[i].category);
+	$(p).attr('name',data[i].name);
 	$(p).addClass('col-sm-15');
 	$(p).addClass('col-xs-15');
-		var card = ['<div id = "card card-' + i + '" name="'+data[i].category+'" index="'+data[i].index+'"><a href="./brands.html?index='+(i+1)+'&name='+data[i].category+'">\
+		var card = ['<div id = "card card-' + i + '" name="'+data[i].name+'" index="'+data[i].index+'"><a href="./brands.html?index='+(i+1)+'&name='+data[i].name+'">\
 					<center><img class="image-url block-inline" src="' + data[i].url + '"></center>\
 					<div class="break"></div>\
 					<div class="image-name">' + data[i].name + '</div>\
@@ -103,6 +116,40 @@ if (i == length) {
 
 },150);
 
+// 	for (i = 0; i < data.length-1; i++) {
+// 		try {
+// 	  p = $('<div/>').attr('class', 'col-md-15');
+// 		$(p).addClass('col-lg-15');
+// 		$(p).addClass('col-sm-15');
+// 		$(p).addClass('col-xs-15');
+// 		console.log(p);
+// 		//debugger;
+// 		var card = ['<div id = "card-' + i+1 + '">\
+// 					<img class="image-url block-inline" src="' + data[i].url + '">\
+// 					<div class="break"></div>\
+// 					<div class="image-name">' + data[i].name + '</div>\
+// 					</div>'];
+// 		//alert(card);
+// 		$(p).append(card);
+// 		waitTime().then(function(){
+// 			$('.display-area').append(p);
+// 			$(p).fadeIn('slow');
+// 		}).fail(function(){
+// 			$('.display-area').append(p);
+// 			$(p).fadeIn('slow');
+// 		});
+// 		$('.display-area').append(p);
+// 		$(p).fadeIn('slow');
+//
+//
+//
+// 		//this.generate(data[i].url, data[i].name, p, i + 1);
+//
+// 		}
+// 		catch(err)
+// 		{}
+// 	}
+// }
 }
 function waitTime  () {
 	var  defer = $.Deferred();

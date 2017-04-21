@@ -5,20 +5,22 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/search.css" rel="stylesheet">
   <link href="../css/style1.css" rel="stylesheet">
-    <script src="../js/model.js"></script>
-  <script src="../js/option.js"/>
+  <script src="../js/model.js"></script>
+  <script src="../js/brand.js"></script>
   <script src="../js/jquery-events.js"></script>
   <link href="../css/sidebar.css" rel="stylesheet"/>
   <link href="../css/newStyle.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css">
     <title>Fake Product View</title>
   </head>
   <script>
   </script>
-  <body onload="init() ">
+  <body onload="init()">
     <div class="navbar navbar-static navbar-default navbar-fixed-top">
   		<div class="container-fluid">
   			<div class="navbar-header">
@@ -83,28 +85,34 @@
       </ul>
     </div>
     <div class="main col-sm-12 col-xs-12 col-md-12 " id="globalCntr">
-      <div class="page-header domain">
-              <h2>Choose Method Of Summary Generation</h2>
-      </div>
-      <div class="SummarySelections">
-        <div class="col-md-offset-3 col-md-5 col-xs-12"  data-toggle="modal" data-target="#rankTextModal">
-          <div class="textRank categoryColor">
-              <div class="itemsText">
-                Text Rank  <img class="itemsImage"src="../images/rightArrow.png"/>
-              </div>
-
+      <div class="page-header">
+              <h2>Select Your Domain</h2>
+              <div class="itemOptions">
+                <div class="col-sm-7 col-md-8 col-xs-12">
+                  <div class="col-md-2 noSidePadding automotives">
+                    <span class="btn options auto selected">Automotives</span>
+                  </div>
+                </div>
+                </div>
+                <div class="col-sm-5 col-md-4 col-xs-12 sorting-options">
+                  <div class="col-sm-2 col-md-3 visible-sm visible-md visible-lg"></div>
+                  <!--
+                  <div class="col-sm-2 col-md-2 col-xs-3">
+                    <span class="btn">Name</span>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-xs-3">
+                    <span class="btn">Size</span>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-xs-3">
+                    <span class="btn" style="margin-left:-8px;">Views</span>
+                  </div>
+                -->
+                  <div class="col-sm-3 col-md-3 col-xs-3 sorting-name">
+                    <span class="btn sorting-option-selected">Name</span>
+                  </div>
+                </div>
           </div>
-        </div>
-        <br>
-        <div class="col-md-offset-3 col-md-5 col-xs-12" data-toggle="modal" data-target="#rfidModal">
-          <div class="rfid categoryColor">
-              <div class="itemsText">
-                TFID   <img class="itemsImage"src="../images/rightArrow.png"/>
-              </div>
-          </div>
-        </div>
-      </div>
-
+            <div class="display-area"></div>
     </div>
     <div id="categories">
         <div class="">
@@ -116,49 +124,6 @@
 
   </body>
 </html>
-
-
-
-
-<div class="modal fade" id="rankTextModal">
-<div class="modal-dialog">
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title">Text Rank</h4>
-  </div>
-  <div class="modal-body">
-    <p>Do you want to enable debugging?</p>
-    <input type="checkbox"/>&nbspYes
-    <input type="checkbox"/>&nbspNo
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-default"><a href="textRanking.html">Proceed</a></button>
-  </div>
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-<div class="modal fade" id="rfidModal">
-<div class="modal-dialog">
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title">TFID</h4>
-  </div>
-  <div class="modal-body">
-    <p>Do you want to enable debugging?</p>
-    <input type="checkbox"/>&nbspYes
-    <input type="checkbox"/>&nbspNo
-    <br>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-default"><a href="./tfid.html">Proceed</a></button>
-  </div>
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<!-- ng -click for on click,for images ng-src="1-{{state}}.png" if we dont put
+ng-src on first parse by htmlit will give error and then angular putsstring.
+ ng-bind-html="divHtmlVar" use divHtmlVar to add or remove text-->
